@@ -62,3 +62,12 @@ class FollowsController < ApplicationController
     @resource ||= current_user.follows.where(:id => params[:id]).first
   end
 end
+
+def smart_return
+    if params[:return_to].present?
+      redirect_to params[:return_to]
+    else
+      redirect_to :action => :index
+    end
+  end
+end
