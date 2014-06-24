@@ -20,6 +20,9 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
 
+# Use FFaker for random seed generation: https://github.com/EmmanuelOga/ffaker
+gem 'ffaker'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
@@ -45,13 +48,12 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   # Use Factory Girl for Active Record sample instance object creation: https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md
   gem 'factory_girl_rails'
-  # Use FFaker for random seed generation: https://github.com/EmmanuelOga/ffaker
-  gem 'ffaker'
   # Use Shoulda Matchers for validation and association testing: https://github.com/thoughtbot/shoulda-matchers
   gem 'shoulda-matchers'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
 end
+
 group :production do
   gem 'rails_12factor'
   gem 'pg' 
