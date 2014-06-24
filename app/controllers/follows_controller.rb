@@ -68,6 +68,5 @@ def smart_return
       redirect_to params[:return_to]
     else
       redirect_to :action => :index
-    end
-  end
+   end
 end
